@@ -2,6 +2,8 @@
     "description":"AMI for ami-0817d428a6fb68645",
     "variables":{
         "aws_region": "us-east-1",
+        "aws_access_key":"{{env `aws_access_key`}}",
+        "aws_secret_key":"{{env `aws_secret_key`}}",
         "subnet_id": "subnet-54ed835a",
         "source_ami": "ami-0817d428a6fb68645",
         "ssh_username": "ubuntu"
