@@ -1,3 +1,3 @@
 # ami
 Packer update
-packer build
+packer build command
