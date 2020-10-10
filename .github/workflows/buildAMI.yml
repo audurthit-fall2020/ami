@@ -1,0 +1,19 @@
+name: AMI CI/CD
+on:
+  pull_request:
+    branches:
+      - main
+jobs:
+  installPacker:
+    runs-on: ubuntu-latest
+    steps:
+      - run: sudo apt install curl
+      - run: curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+      - run: sudo apt-get update && sudo apt-get install packer
+      - uses: actions/checkout@v2
+      - run: packer validate ./ubuntu18.ami.json
+      - name: Retrieve secrets and build AMI
+        env:
+          aws_access_key: ${{secrets.AWS_ACCESS_KEY}}
+          aws_secret_key: ${{secrets.AWS_SECRET_KEY}}
+        run: packer build -var "aws_access_key=$aws_access_key" -var "aws_secret_key=$aws_secret_key" ubuntu18.ami.json
