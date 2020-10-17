@@ -1,7 +1,7 @@
 # AMI
-# Packer validate:
+# Packer Validate:
 - `packer validate ubuntu18.ami.json`
-# Packer build:
+# Packer Build:
 - Export Access key and Secret Key  
  `export AWS_ACCESS_KEY_ID="$aws_access_key"`  
  `export AWS_SECRET_ACCESS_KEY="$aws_secret_key"`  
