@@ -32,6 +32,8 @@
             "type": "shell",
             "inline": [
                 "sudo apt-get update",
+                "echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections",
+                "sudo apt-get install -y -q",
                 "sudo apt install curl",
                 "curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -",                
                 "sudo apt-get install -y nodejs",
