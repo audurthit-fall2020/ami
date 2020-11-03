@@ -1,4 +1,5 @@
 # AMI
+- Builds AMI with Node.js and codedepoly agent installed
 # Packer Validate:
 - `packer validate ubuntu18.ami.json`
 # Packer Build:
