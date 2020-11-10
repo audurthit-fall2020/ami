@@ -1,7 +1,7 @@
 # AMI
 - Builds AMI with Node.js and codedepoly agent installed
 # Packer Validate:
-- `packer validate ubuntu18.ami.json`
+- `packer validate ./ubuntu18.ami.json`
 # Packer Build:
 - Export Access key and Secret Key  
  `export AWS_ACCESS_KEY_ID="$aws_access_key"`  
