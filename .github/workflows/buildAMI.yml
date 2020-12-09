@@ -8,7 +8,7 @@ jobs:
   installPacker:
     runs-on: ubuntu-latest
     steps:
-      - run: sudo apt install curl
+      - run: sudo apt install curl -y
       - run: curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
       - run: sudo apt-get update && sudo apt-get install packer
       - uses: actions/checkout@v2
